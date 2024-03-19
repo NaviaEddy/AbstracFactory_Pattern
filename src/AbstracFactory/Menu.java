@@ -20,26 +20,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-    //FABRICA DE AUTOS SUV
-    AutomobileFactory SuvFactory = new SuvVehiclesFactory();
-    SuvBody suvbody = (SuvBody) SuvFactory.createBody();
-    SuvChassis suvchassis = (SuvChassis) SuvFactory.createChassis();
-    SuvEngine suvengine = (SuvEngine) SuvFactory.createEngine();
-    SuvWheels suvwheels = (SuvWheels) SuvFactory.createWheels();
-
-    //FABRICA DE AUTOS TRUCK
-    AutomobileFactory TruckFactory = new TruckVehiclesFactory();
-    TruckBody truckbody = (TruckBody) TruckFactory.createBody();
-    TruckChassis truckchassis = (TruckChassis) TruckFactory.createChassis();
-    TruckEngine truckengine = (TruckEngine) TruckFactory.createEngine();
-    TruckWheels truckwheels = (TruckWheels) TruckFactory.createWheels();
-
-    //FABRICA DE AUTOS VAN
-    AutomobileFactory VanFactory = new VanVehiclesFactory();
-    VanBody vanbody = (VanBody) VanFactory.createBody();
-    VanChassis vanchassis = (VanChassis) VanFactory.createChassis();
-    VanEngine vanengine = (VanEngine) VanFactory.createEngine();
-    VanWheels vanwheels = (VanWheels) VanFactory.createWheels();
     private Scanner sc;
     int opcion;
 
@@ -82,27 +62,44 @@ public class Menu {
 
     private void BuildSuv() {
         System.out.println("SUV");
+        //FABRICA DE AUTOS SUV
+        AutomobileFactory SuvFactory = new SuvVehiclesFactory();
+        SuvBody suvbody = (SuvBody) SuvFactory.createBody();
         System.out.println("Carroceria: " + suvbody.getBodyType());
+        SuvChassis suvchassis = (SuvChassis) SuvFactory.createChassis();
         System.out.println("Chasis: " + suvchassis.getChassisType());
+        SuvEngine suvengine = (SuvEngine) SuvFactory.createEngine();
         System.out.println("Motor: " + suvengine.getEngineType());
+        SuvWheels suvwheels = (SuvWheels) SuvFactory.createWheels();
         System.out.println("Ruedas: " + suvwheels.getWheelsType());
     }
 
     private void BuildVan() {
         System.out.println("FURGONETA");
+        //FABRICA DE AUTOS VAN
+        AutomobileFactory VanFactory = new VanVehiclesFactory();
+        VanBody vanbody = (VanBody) VanFactory.createBody();
         System.out.println("Carroceria: " + vanbody.getBodyType());
+        VanChassis vanchassis = (VanChassis) VanFactory.createChassis();
         System.out.println("Chasis: " + vanchassis.getChassisType());
+        VanEngine vanengine = (VanEngine) VanFactory.createEngine();
         System.out.println("Motor: " + vanengine.getEngineType());
+        VanWheels vanwheels = (VanWheels) VanFactory.createWheels();
         System.out.println("Ruedas: " + vanwheels.getWheelsType());
     }
 
     private void BuildTruck() {
         System.out.println("CAMION");
+        //FABRICA DE AUTOS TRUCK
+        AutomobileFactory TruckFactory = new TruckVehiclesFactory();
+        TruckBody truckbody = (TruckBody) TruckFactory.createBody();
         System.out.println("Carroceria: " + truckbody.getBodyType());
+        TruckChassis truckchassis = (TruckChassis) TruckFactory.createChassis();
         System.out.println("Chasis: " + truckchassis.getChassisType());
+        TruckEngine truckengine = (TruckEngine) TruckFactory.createEngine();
         System.out.println("Motor: " + truckengine.getEngineType());
+        TruckWheels truckwheels = (TruckWheels) TruckFactory.createWheels();
         System.out.println("Ruedas: " + truckwheels.getWheelsType());
     }
-
 
 }
