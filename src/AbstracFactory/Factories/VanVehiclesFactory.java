@@ -1,14 +1,14 @@
 package AbstracFactory.Factories;
 
 import AbstracFactory.AutomobileFactory;
-import AbstracFactory.Components.Body;
-import AbstracFactory.Components.Chassis;
-import AbstracFactory.Components.Engine;
-import AbstracFactory.Components.Wheels;
-import AbstracFactory.Components.body.VanBody;
-import AbstracFactory.Components.chassis.VanChassis;
-import AbstracFactory.Components.engine.VanEngine;
-import AbstracFactory.Components.wheels.VanWheels;
+import AbstracFactory.Products.Body;
+import AbstracFactory.Products.Chassis;
+import AbstracFactory.Products.Engine;
+import AbstracFactory.Products.Wheels;
+import AbstracFactory.Products.Van.VanBody;
+import AbstracFactory.Products.Van.VanChassis;
+import AbstracFactory.Products.Van.VanEngine;
+import AbstracFactory.Products.Van.VanWheels;
 
 public class VanVehiclesFactory implements AutomobileFactory {
     @Override

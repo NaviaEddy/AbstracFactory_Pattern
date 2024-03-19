@@ -1,6 +1,6 @@
-package AbstracFactory.Components.engine;
+package AbstracFactory.Products.Suv;
 
-import AbstracFactory.Components.Engine;
+import AbstracFactory.Products.Engine;
 
 public class SuvEngine implements Engine {
     @Override

@@ -1,6 +1,6 @@
-package AbstracFactory.Components.engine;
+package AbstracFactory.Products.Van;
 
-import AbstracFactory.Components.Engine;
+import AbstracFactory.Products.Engine;
 
 public class VanEngine implements Engine {
     @Override

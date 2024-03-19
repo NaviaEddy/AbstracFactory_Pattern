@@ -1,6 +1,6 @@
-package AbstracFactory.Components.wheels;
+package AbstracFactory.Products.Van;
 
-import AbstracFactory.Components.Wheels;
+import AbstracFactory.Products.Wheels;
 
 public class VanWheels implements Wheels {
     @Override

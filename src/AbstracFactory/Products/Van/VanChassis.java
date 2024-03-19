@@ -1,6 +1,6 @@
-package AbstracFactory.Components.chassis;
+package AbstracFactory.Products.Van;
 
-import AbstracFactory.Components.Chassis;
+import AbstracFactory.Products.Chassis;
 
 public class VanChassis implements Chassis {
     @Override

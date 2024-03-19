@@ -1,9 +1,9 @@
 package AbstracFactory;
 
-import AbstracFactory.Components.Body;
-import AbstracFactory.Components.Chassis;
-import AbstracFactory.Components.Engine;
-import AbstracFactory.Components.Wheels;
+import AbstracFactory.Products.Body;
+import AbstracFactory.Products.Chassis;
+import AbstracFactory.Products.Engine;
+import AbstracFactory.Products.Wheels;
 
 public interface AutomobileFactory {
     Body createBody();

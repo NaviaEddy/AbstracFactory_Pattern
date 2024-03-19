@@ -1,6 +1,6 @@
-package AbstracFactory.Components.chassis;
+package AbstracFactory.Products.Suv;
 
-import AbstracFactory.Components.Chassis;
+import AbstracFactory.Products.Chassis;
 
 public class SuvChassis implements Chassis {
     @Override

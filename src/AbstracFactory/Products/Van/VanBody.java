@@ -1,6 +1,6 @@
-package AbstracFactory.Components.body;
+package AbstracFactory.Products.Van;
 
-import AbstracFactory.Components.Body;
+import AbstracFactory.Products.Body;
 
 public class VanBody implements Body {
     @Override

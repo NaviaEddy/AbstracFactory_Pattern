@@ -1,4 +1,4 @@
-package AbstracFactory.Components;
+package AbstracFactory.Products;
 
 public interface Engine {
     String getEngineType();
