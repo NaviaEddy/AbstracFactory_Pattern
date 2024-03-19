@@ -20,6 +20,10 @@ import java.util.Scanner;
 
 public class Menu {
 
+    //FABRICAS
+    AutomobileFactory SuvFactory = new SuvVehiclesFactory();
+    AutomobileFactory VanFactory = new VanVehiclesFactory();
+    AutomobileFactory TruckFactory = new TruckVehiclesFactory();
     private Scanner sc;
     int opcion;
 
@@ -64,7 +68,6 @@ public class Menu {
         System.out.println("Fabricando SUV...");
 
         //FABRICA DE AUTOS SUV
-        AutomobileFactory SuvFactory = new SuvVehiclesFactory();
         SuvBody suvbody = (SuvBody) SuvFactory.createBody();
         SuvChassis suvchassis = (SuvChassis) SuvFactory.createChassis();
         SuvEngine suvengine = (SuvEngine) SuvFactory.createEngine();
@@ -81,7 +84,6 @@ public class Menu {
         System.out.println("Fabricando FURGONETA...");
 
         //FABRICA DE AUTOS VAN
-        AutomobileFactory VanFactory = new VanVehiclesFactory();
         VanBody vanbody = (VanBody) VanFactory.createBody();
         VanChassis vanchassis = (VanChassis) VanFactory.createChassis();
         VanEngine vanengine = (VanEngine) VanFactory.createEngine();
@@ -98,7 +100,6 @@ public class Menu {
         System.out.println("Fabricando CAMION...");
 
         //FABRICA DE AUTOS TRUCK
-        AutomobileFactory TruckFactory = new TruckVehiclesFactory();
         TruckBody truckbody = (TruckBody) TruckFactory.createBody();
         TruckChassis truckchassis = (TruckChassis) TruckFactory.createChassis();
         TruckEngine truckengine = (TruckEngine) TruckFactory.createEngine();
