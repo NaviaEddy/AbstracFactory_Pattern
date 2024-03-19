@@ -1,0 +1,36 @@
+# Ignorar archivos generados por el IDE IntelliJ IDEA
+.idea/
+
+# Ignorar archivos compilados y generados
+*.class
+*.jar
+*.war
+*.ear
+/target/
+
+# Ignorar archivos de configuración específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de logs y archivos temporales
+log/
+logs/
+*.log
+*.log.*
+*.tmp
+
+# Ignorar archivos de dependencias de Maven
+/.mvn/
+/maven/
+/maven-wrapper.jar
+/.gradle/
+
+# Ignorar archivos de compilación de Gradle
+/build/
+.gradle/
+
+# Ignorar archivos de dependencias específicas de la IDE Eclipse
+/.metadata/
+/.project
+/.classpath
+/.settings/
