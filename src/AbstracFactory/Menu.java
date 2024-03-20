@@ -21,9 +21,9 @@ import java.util.Scanner;
 public class Menu {
 
     //FABRICAS
-    AutomobileFactory SuvFactory = new SuvVehiclesFactory();
-    AutomobileFactory VanFactory = new VanVehiclesFactory();
-    AutomobileFactory TruckFactory = new TruckVehiclesFactory();
+    IAutomobileFactory SuvFactory = new SuvVehiclesFactory();
+    IAutomobileFactory VanFactory = new VanVehiclesFactory();
+    IAutomobileFactory TruckFactory = new TruckVehiclesFactory();
     private Scanner sc;
     int opcion;
 
@@ -31,15 +31,9 @@ public class Menu {
         this.sc = new Scanner(System.in);
     }
 
-    public void mostrarMenu() {
+    public void choise() {
         do {
-            System.out.println("BIENVENIDO A LA FABRICA ABSTRACTA");
-            System.out.println("Seleccion un tipo de coche:");
-            System.out.println("1. Camion");
-            System.out.println("2. Furgoneta");
-            System.out.println("3. Suv");
-            System.out.println("4. Salir");
-
+            ShowMenu();
             System.out.print("Ingrese su opción: ");
             opcion = sc.nextInt();
 
@@ -64,9 +58,16 @@ public class Menu {
 
     }
 
+    private static void ShowMenu() {
+        System.out.println("Seleccione el tipo de vehículo que desea fabricar: ");
+        System.out.println("1. Camión");
+        System.out.println("2. Furgoneta");
+        System.out.println("3. Suv");
+        System.out.println("4. Salir");
+    }
+
     private void BuildSuv() {
         System.out.println("Fabricando SUV...");
-
         //FABRICA DE AUTOS SUV
         SuvBody suvbody = (SuvBody) SuvFactory.createBody();
         SuvChassis suvchassis = (SuvChassis) SuvFactory.createChassis();
@@ -74,10 +75,17 @@ public class Menu {
         SuvWheels suvwheels = (SuvWheels) SuvFactory.createWheels();
 
         //SUV FINAL
-        System.out.println("Carroceria: " + suvbody.getBodyType());
-        System.out.println("Chasis: " + suvchassis.getChassisType());
-        System.out.println("Motor: " + suvengine.getEngineType());
-        System.out.println("Ruedas: " + suvwheels.getWheelsType());
+        Fabricado("Carroceria: " + suvbody.getBodyType(),
+                "Chasis: " + suvchassis.getChassisType(),
+                "Motor: " + suvengine.getEngineType(),
+                "Ruedas: " + suvwheels.getWheelsType());
+    }
+
+    private static void Fabricado(String suvbody, String suvchassis, String suvengine, String suvwheels) {
+        System.out.println(suvbody);
+        System.out.println(suvchassis);
+        System.out.println(suvengine);
+        System.out.println(suvwheels);
     }
 
     private void BuildVan() {
@@ -90,10 +98,11 @@ public class Menu {
         VanWheels vanwheels = (VanWheels) VanFactory.createWheels();
 
         //VAN FINAL
-        System.out.println("Carroceria: " + vanbody.getBodyType());
-        System.out.println("Chasis: " + vanchassis.getChassisType());
-        System.out.println("Motor: " + vanengine.getEngineType());
-        System.out.println("Ruedas: " + vanwheels.getWheelsType());
+        Fabricado("Carroceria: "
+                + vanbody.getBodyType(),
+                "Chasis: " + vanchassis.getChassisType(),
+                "Motor: " + vanengine.getEngineType(),
+                "Ruedas: " + vanwheels.getWheelsType());
     }
 
     private void BuildTruck() {
@@ -106,10 +115,15 @@ public class Menu {
         TruckWheels truckwheels = (TruckWheels) TruckFactory.createWheels();
 
         //TRUNK FINAL
-        System.out.println("Carroceria: " + truckbody.getBodyType());
-        System.out.println("Chasis: " + truckchassis.getChassisType());
-        System.out.println("Motor: " + truckengine.getEngineType());
-        System.out.println("Ruedas: " + truckwheels.getWheelsType());
+        Fabricado("Carroceria: " + truckbody.getBodyType(),
+                "Chasis: " + truckchassis.getChassisType(),
+                "Motor: " + truckengine.getEngineType(),
+                "Ruedas: " + truckwheels.getWheelsType());
+    }
+    private void mitsubic(){
+        System.out.println("mitsubishi");
+
+
     }
 
 }

@@ -1,6 +1,6 @@
 package AbstracFactory.Factories;
 
-import AbstracFactory.AutomobileFactory;
+import AbstracFactory.IAutomobileFactory;
 import AbstracFactory.Products.Body;
 import AbstracFactory.Products.Chassis;
 import AbstracFactory.Products.Engine;
@@ -10,7 +10,7 @@ import AbstracFactory.Products.Van.VanChassis;
 import AbstracFactory.Products.Van.VanEngine;
 import AbstracFactory.Products.Van.VanWheels;
 
-public class VanVehiclesFactory implements AutomobileFactory {
+public class VanVehiclesFactory implements IAutomobileFactory {
     @Override
     public Body createBody() {
         return new VanBody();
